@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style type="text/css">
+		.container{
+			margin-top: 100px;
+		}
+		.row{
+			margin-top: 30px;
+		}
+	</style>
+	<script type="text/javascript">
+		var Num1;
+		var Num2;
+		function GetValues() {
+			Num1=parseInt(document.getElementById("Num1").value);
+			Num2=parseInt(document.getElementById("Num2").value);
+		}
+		function Sum() {
+			GetValues();
+			var d=Num1 + Num2;
+			document.getElementById("result").innerHTML=d;
+		}
+		function Sub() {
+			GetValues();
+			var d=Num1 - Num2;
+			document.getElementById("result").innerHTML=d;
+		}
+		function Multi() {
+			GetValues();
+			var d=Num1 * Num2;
+			document.getElementById("result").innerHTML=d;
+		}
+		function Div() {
+			GetValues();
+			var d=Num1 / Num2;
+			document.getElementById("result").innerHTML=d;
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<input type="number" id="Num1" class="form-control" name="" placeholder="Enter The First Number">
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<input type="number" id="Num2" class="form-control" name=""placeholder="Enter The Second Number">
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-1">
+				<button type="button" class="btn btn-primary" onclick="Sum()">+</button>
+			</div>
+			<div class="col-sm-1">
+				<button type="button" class="btn btn-primary" onclick="Multi()">*</button>
+			</div>
+			<div class="col-sm-1">
+				<button type="button" class="btn btn-primary" onclick="Sub()">-</button>
+			</div>
+			<div class="col-sm-1">
+				<button type="button" class="btn btn-primary" onclick="Div()">/</button>
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4 text-center">
+				<h5 id="result"></h5>
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+	</div>
+</body>
+</html>

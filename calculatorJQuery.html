@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style type="text/css">
+		.container{
+			margin-top: 100px;
+		}
+		.row{
+			margin-top: 30px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#sum").click(function(){
+				var Num1 = parseInt($("#Num1").val());
+				var Num2 = parseInt($("#Num2").val());
+		    $("#result").text(Num1+Num2);
+		  });
+			$("#sub").click(function(){
+				var Num1 = parseInt($("#Num1").val());
+				var Num2 = parseInt($("#Num2").val());
+		    $("#result").text(Num1-Num2);
+		  });
+			$("#multi").click(function(){
+				var Num1 = parseInt($("#Num1").val());
+				var Num2 = parseInt($("#Num2").val());
+		    $("#result").text(Num1*Num2);
+		  });
+			$("#div").click(function(){
+				var Num1 = parseInt($("#Num1").val());
+				var Num2 = parseInt($("#Num2").val());
+		    $("#result").text(Num1/Num2);
+		  });
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<input type="number" id="Num1" class="form-control" name="" placeholder="Enter The First Number">
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<input type="number" id="Num2" class="form-control" name=""placeholder="Enter The Second Number">
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-1">
+				<button type="button" class="btn btn-primary" id="sum">+</button>
+			</div>
+			<div class="col-sm-1">
+				<button type="button" class="btn btn-primary" id="multi">*</button>
+			</div>
+			<div class="col-sm-1">
+				<button type="button" class="btn btn-primary" id="sub">-</button>
+			</div>
+			<div class="col-sm-1">
+				<button type="button" class="btn btn-primary" id="div">/</button>
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4 text-center">
+				<h5 id="result"></h5>
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+	</div>
+</body>
+</html>
